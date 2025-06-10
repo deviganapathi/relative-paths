@@ -1,0 +1,53 @@
+# version: '3'
+# services:
+#  test1:
+#   tty: true
+#   stdin_open: true
+#   image: alpine
+#   # entrypoint: watch cat /file
+#   volumes:
+#    - ./devices/${PORTAINER_EDGE_ID}:/home/file.txt
+
+#  test2:
+#   tty: true
+#   stdin_open: true
+#   image: alpine
+#   # entrypoint: watch cat /file
+#   volumes:
+#    - ./devices/${PORTAINER_EDGE_ID}:/home/file.txt
+  
+#  test3:
+#   tty: true
+#   stdin_open: true
+#   image: alpine
+#   # entrypoint: watch cat /file
+#   volumes:
+#    - ./devices/${PORTAINER_EDGE_ID}:/home/file.txt   
+
+version: '3'
+services:
+ test1:
+  tty: true
+  stdin_open: true
+  image: alpine
+  environment:
+   - hello=gi
+  # entrypoint: watch cat /file
+  volumes:
+   - ./devices/${PORTAINER_EDGE_GROUP}.txt:/home/hoopla.txt
+
+ test2:
+  tty: true
+  stdin_open: true
+  image: alpine
+  # entrypoint: watch cat /file
+  volumes:
+   - ./devices/${PORTAINER_EDGE_GROUP}.txt:/home/hoopla.txt
+  
+ test3:
+  tty: true
+  stdin_open: true
+  image: alpine
+  # entrypoint: watch cat /file
+  volumes:
+   - ./devices/${PORTAINER_EDGE_GROUP}.txt:/home/hoopla.txt
